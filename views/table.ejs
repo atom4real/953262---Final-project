@@ -1,0 +1,36 @@
+<%- include("partials/header") -%> 
+
+<section id="table">
+    <div class="container-fluid">
+        <div class="table-head">
+            SELECT YOUR TABLE
+        </div>
+        <div class="row table-row">
+            <div class="col btn-table">
+                <form action="/menu" method="get">
+                    <input class="button-add" type="submit" class="btn btn-info" value="Table 1">
+                </form>
+            </div>
+            <div class="col btn-table">
+                <form action="/menu2" method="get">
+                    <input class="button-add" type="submit" class="btn btn-info" value="Table 2">
+                </form>
+            </div>
+        </div>
+        <div class="row table-row">
+            <div class="col btn-table">
+                <form action="/menu3" method="get">
+                    <input class="button-add" type="submit" class="btn btn-info" value="Table 3">
+                </form>
+            </div>
+            <div class="col btn-table">
+                <form action="/menu4" method="get">
+                    <input class="button-add" type="submit" class="btn btn-info" value="Table 4">
+                </form>
+            </div>
+        </div>
+    
+    </div>
+</section>
+
+<%- include("partials/footer") -%> 

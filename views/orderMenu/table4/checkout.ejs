@@ -1,0 +1,120 @@
+<%- include("../../partials/nav") -%> 
+
+<% if (messages.error) { %>
+    <div class="alert alert-danger" role="alert"><%= messages.error %></div>
+<% } %>
+
+<% if (messages.success) { %>
+    <div class="alert alert-success" role="alert"><%= messages.success %></div>
+<% } %>
+
+<div class="card">
+    <div class="card-header">
+        <div class="head-orderlist">
+            <div class="row">
+                <div class="col">
+
+                </div>
+                <div class="col">
+                    CHECKOUT
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scan2pay">
+        <div class="img-bank">
+            <img src="../../img/kbank.png">
+        </div>
+        <h3>765-1272-8172-5</h3>
+        <h4>Saccherine Restaurant</h4>
+        <blockquote></blockquote>
+        <hr>
+        
+        <div class="img-bank">
+            <img src="../../img/bangkokbank.png">
+        </div>
+        <h3>765-1272-8172-5</h3>
+        <h4>Saccherine Restaurant</h4>
+        <blockquote></blockquote>
+        <hr>
+
+        <div class="img-bank">
+            <img src="../../img/scbbank.png">
+        </div>
+        <h3>765-1272-8172-5</h3>
+        <h4>Saccherine Restaurant</h4>
+        <blockquote></blockquote>
+        <hr>
+
+        <div class="img-bank">
+            <img src="../../img/krungthaibank.png">
+        </div>
+        <h3>765-1272-8172-5</h3>
+        <h4>Saccherine Restaurant</h4>
+        <blockquote></blockquote>
+        <hr>
+
+        <h1>
+            SCAN TO PAY
+        </h1>
+        <div class="img-scan">
+            <img src="../../img/scan2pay.png">
+        </div>
+    </div>
+
+    <div class="card-body">
+        <% if(data.length) { %>
+            <% let total = 0 %> 
+            <% let count = 0 %> 
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Images</th>
+                        <th scope="col">Lists</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Unit price</th>
+                        <th scope="col">Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let i = 0; i < data.length; i++) { %>
+                        <tr>
+                            <th scope="row">
+                                <%= data[i].id %></th>
+                            <td><img class="img-index" src="<%= data[i].img %>" alt=""></td>
+                            <td><%= data[i].name %></td>
+                            <td><%= data[i].quantity %></td>
+                            <td><%= data[i].price %></td>
+                            <td><%= data[i].price * data[i].quantity %></td>
+                        </tr>
+                        <% total += (data[i].price * data[i].quantity) %> 
+                    <% } %>
+                </tbody>
+                <tfoot>
+                    
+                    <td class="price_txt" scope="col" colspan="4"></td>
+                    <td class="price_txt" scope="col" colspan="1">Total Price</td>
+                    <td class="price_txt"><%= total %> </td>
+
+                 </tfoot>
+            </table>
+        <% } %>
+
+        <% if(!data.length) { %>
+            <p class="text-center">Order is not found!</p>
+        <% } %>
+
+        <form action="checkoutTable4/paid" method="post">
+            <div class="btn-done">
+                <input class="button pay-button" type="submit" class="btn btn-info" value="Done">
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include("../../partials/footer") -%> 

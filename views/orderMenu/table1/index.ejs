@@ -1,0 +1,94 @@
+<%- include("../../partials/nav") -%> 
+
+    <% if (messages.error) { %>
+        <div class="alert alert-danger" role="alert"><%= messages.error %></div>
+    <% } %>
+    
+    <% if (messages.success) { %>
+        <div class="alert alert-success" role="alert"><%= messages.success %></div>
+    <% } %>
+
+    <div class="card">
+        <div class="card-header">
+            <div class="head-orderlist">
+                <div class="row">
+                    <div class="col">
+
+                    </div>
+                    <div class="col">
+                        TABLE: 1
+                    </div>
+                    <div class="col">
+                        <a href="/menu/add" class="button-add">Order food</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <% if(data.length) { %>
+                <% let total = 0 %> 
+                <% let count = 0 %> 
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Images</th>
+                            <th scope="col">Lists</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Price</th>
+                            <th scope="col" width="200px">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(let i = 0; i < data.length; i++) { %>
+                            <tr>
+                                <th scope="row">
+                                    <%= data[i].id %></th>
+                                <td><img class="img-index" src="<%= data[i].img %>" alt=""></td>
+                                <td><%= data[i].name %></td>
+                                <td><%= data[i].status %></td>
+                                <td><%= data[i].quantity %></td>
+                                <td><%= data[i].price %></td>
+                                <td>
+                                    <!-- <a href="../menu/edit/<%= data[i].id %>" class="btn btn-success edit">Edit</a> -->
+                                    <% if (data[i].status.toLowerCase() === "Queue".toLowerCase()) { %>
+                                        <a href="../menu/delete/<%= data[i].id %>" onclick="return alert('Are you sure?')" class="btn btn-danger delete">Delete</a>
+                                    <% } 
+                                    else if (data[i].status.toLowerCase() === "Served".toLowerCase() || "Serve".toLowerCase()) { %>
+                                        <% count += 1 %>
+                                        <a href="../menu/delete/<%= data[i].id %>" onclick="return alert('Are you sure?')" class="btn disabled delete">Delete</a>
+                                    <% } 
+                                    else { %>
+                                        <a href="../menu/delete/<%= data[i].id %>" onclick="return alert('Are you sure?')" class="btn disabled delete">Delete</a>
+                                    <% } %>
+                                </td>
+                            </tr>
+                            <% total += (data[i].price * data[i].quantity) %> 
+                        <% } %>
+                    </tbody>
+                    <tfoot>
+                        
+                        <td class="price_txt" scope="col" colspan="4"></td>
+                        <td class="price_txt" scope="col" colspan="1">Total Price</td>
+                        <td class="price_txt"><%= total %> </td>
+                        <td class="price_txt">
+                            <% if (count == data.length) { %>
+                                <a href="/checkoutTable1" class="btn btn-danger delete">CHECK OUT</a>
+                            <% } else { %>
+                                <a href="%>" class="btn disabled delete">CHECK OUT</a>
+                            <% } %>     
+                        </td>
+
+                     </tfoot>
+                </table>
+            <% } %>
+
+            <% if(!data.length) { %>
+                <p class="text-center">Order is not found!</p>
+            <% } %>
+        </div>
+    </div>
+
+<%- include("../../partials/footer") -%> 

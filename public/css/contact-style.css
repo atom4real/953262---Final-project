@@ -1,0 +1,48 @@
+body {
+    height: 100%;
+}
+
+.contact-bg {
+    background-image: url('../img/contact-bg.jpeg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50%; 
+    filter: blur(8px);
+    filter: opacity(70%);
+    -webkit-filter: blur(6px);
+}
+
+.icon1-contact:hover {
+    color: rgb(0, 109, 211);
+}
+.icon2-contact:hover {
+    color: rgb(138, 58, 185);
+}
+.icon3-contact:hover {
+    color: rgb(24, 145, 0);
+}
+
+.text-pane a:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+.text-pane a:visited {
+    color: rgb(147, 176, 255);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.map {
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.map-head {
+    font-size: 4.5rem;
+    font-weight: bolder;
+    padding-bottom: 2%;
+}

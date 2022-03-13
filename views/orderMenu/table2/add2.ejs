@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Saccherine</title>
+
+    <link rel="stylesheet" href="../css/add-style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../quantity.js"></script>
+    <script src="../search.js"></script>
+</head>
+<body >
+
+    <% if (messages.error) { %>
+        <div class="alert alert-danger" role="alert"><%= messages.error %></div>
+    <% } %>
+    
+    <a href="/menu2" class="btn btn-info">Back</a>
+
+
+        <section id="menu">
+            <div class="containerPage">
+                <div class="row">
+                    <div class="col-sm">
+    
+                        <!-- Search Bar -->
+                        <div class="search-pane">
+                            <form class="example" >
+                                <input id="name-food" type="text" placeholder="Search.." name="name-search">
+                                <input class="button-search" type="button" onclick="searching()" value="Search">
+                            </form>
+                        </div>
+
+                        <div class="food-type">
+                            <a class="types" href="#appetizers">Appetizers</a>
+                            <a class="types" href="#main_dishes">Main Dishes</a>
+                            <a class="types" href="#drinks">Drinks</a>
+                            <hr>
+                        </div>
+    
+                        <a id="click_item1" href="#item1"></a>
+                        <a id="click_item2" href="#item2"></a>
+                        <a id="click_item3" href="#item3"></a>
+                        <a id="click_item4" href="#item4"></a>
+
+                        <a id="click_item5" href="#item5"></a>
+                        <a id="click_item6" href="#item6"></a>
+                        <a id="click_item7" href="#item7"></a>
+                        <a id="click_item8" href="#item8"></a>
+
+                        <a id="click_item9" href="#item9"></a>
+                        <a id="click_item10" href="#item10"></a>
+                        <a id="click_item11" href="#item11"></a>
+                        <a id="click_item12" href="#item12"></a>
+
+                        <div id="appetizers" class="head-leftpane">
+                            Appetizers
+                            <hr>
+                        </div>
+
+                        <!-- Item : 1 -->
+                        <div class="leftpane">
+                            <div id="item1" class="row item">
+                                <div class="col">
+                                    <div class="img-pane">
+                                        <img src="/img/Honey-glazedonionrings.jpg" alt="spagetti">
+                                    </div>
+                                </div>
+                                <div class="space-pane" >
+
+                                    <form action="/menu2/add2" method="post">
+                                        <div class="info-head noneDisplay" name="name">
+                                            <input type="text" class="form-control" name="name" value="<%= name="Honey-glazed onion rings" %>" autocomplete="off">
+                                        </div>
+                                        <input type="text" class="form-control noneDisplay" name="status" value="<%= status="Queue" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="price" value="<%= price=150 %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="img" value="<%= img="/img/Honey-glazedonionrings.jpg" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="table_num" value="<%= table_num=2 %>" autocomplete="off">
+                                        
+                                        <div class="info-head" name="name">
+                                            
+                                            Honey-glazed onion rings
+    
+                                        </div>
+                                        <div class="info-para" name="status"> 
+                                            Seet vidalia onions, deep friend in beer batter, glazed with thyme honey
+                                         </div>
+                                         <div class="info-para" name="price"> 
+                                            Price: 150 Baht
+                                         </div>
+                                         <div class="info-para">
+                                            <input type="text" placeholder="add some special..." name="special" value="<%= special %> ">
+                                         </div>
+                                        <div class="button-pane quantity buttons_added">
+                                            <input type="button" onclick="decrease1()" value="-" class="minus">
+                                            <input id="text1" type="number" step="1" min="1"
+                                                max="" name="quantity" value="1" value="<%= quantity %> " title="Qty" class="input-text qty text"
+                                                size="4" pattern="" inputmode="" >
+                                            <input type="button" onclick="increase1()" value="+" class="plus">
+
+                                            <input class="button-add" type="submit" class="btn btn-info" value="Add">
+                                        </div>
+                                    </form>
+
+                                
+    
+                                </div>
+                            </div>
+
+                            <!-- Item : 2 -->
+                            <div id="item2" class="row item">
+                                <div class="col">
+                                    <div class="img-pane">
+                                        <img src="/img/Smoked chicken quesadilla.jpg" alt="spagetti">
+                                    </div>
+                                </div>
+                                <div class="space-pane" >
+
+                                    <form action="/menu2/add2" method="post">
+                                        <div class="info-head noneDisplay" name="name">
+                                            <input type="text" class="form-control" name="name" value="<%= name="Smoked chicken quesadilla" %>" autocomplete="off">
+                                        </div>
+                                        <input type="text" class="form-control noneDisplay" name="status" value="<%= status="Queue" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="price" value="<%= price=170 %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="img" value="<%= img="/img/Smoked chicken quesadilla.jpg" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="table_num" value="<%= table_num=2 %>" autocomplete="off">
+                                        
+                                        <div class="info-head" name="name">
+                                            
+                                            Smoked chicken quesadilla
+    
+                                        </div>
+                                        <div class="info-para" name="status"> 
+                                            Smoked chicken quesadilla with catamelized onions, roasted poblano guacamole, jicama
+                                            salsa & chipotle
+                                         </div>
+                                         <div class="info-para" name="price"> 
+                                            Price: 170 Baht
+                                         </div>
+                                         <div class="info-para">
+                                            <input type="text" placeholder="add some special..." name="special" value="<%= special %> ">
+                                         </div>
+                                        <div class="button-pane quantity buttons_added">
+                                            <input type="button" onclick="decrease2()" value="-" class="minus">
+                                            <input id="text2" type="number" step="1" min="1"
+                                                max="" name="quantity" value="1" value="<%= quantity %> " title="Qty" class="input-text qty text"
+                                                size="4" pattern="" inputmode="" >
+                                            <input type="button" onclick="increase2()" value="+" class="plus">
+
+                                            <input class="button-add" type="submit" class="btn btn-info" value="Add">
+                                        </div>
+                                    </form>
+
+                                
+    
+                                </div>
+                            </div>
+
+                            <!-- Item : 3 -->
+                            <div id="item3" class="row item">
+                                <div class="col">
+                                    <div class="img-pane">
+                                        <img src="/img/fried-calamari-67.jpg" alt="spagetti">
+                                    </div>
+                                </div>
+                                <div class="space-pane" >
+
+                                    <form action="/menu2/add2" method="post">
+                                        <div class="info-head noneDisplay" name="name">
+                                            <input type="text" class="form-control" name="name" value="<%= name="Smoked chicken quesadilla" %>" autocomplete="off">
+                                        </div>
+                                        <input type="text" class="form-control noneDisplay" name="status" value="<%= status="Queue" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="price" value="<%= price=120 %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="img" value="<%= img="/img/fried-calamari-67.jpg" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="table_num" value="<%= table_num=2 %>" autocomplete="off">
+                                        
+                                        <div class="info-head" name="name">
+                                            
+                                            Fried calamari
+    
+                                        </div>
+                                        <div class="info-para" name="status"> 
+                                            Fried calamari with house-mad marinara and salad greens
+                                         </div>
+                                         <div class="info-para" name="price"> 
+                                            Price: 120 Baht
+                                         </div>
+                                         <div class="info-para">
+                                            <input type="text" placeholder="add some special..." name="special" value="<%= special %> ">
+                                         </div>
+                                        <div class="button-pane quantity buttons_added">
+                                            <input type="button" onclick="decrease3()" value="-" class="minus">
+                                            <input id="text3" type="number" step="1" min="1"
+                                                max="" name="quantity" value="1" value="<%= quantity %> " title="Qty" class="input-text qty text"
+                                                size="4" pattern="" inputmode="" >
+                                            <input type="button" onclick="increase3()" value="+" class="plus">
+
+                                            <input class="button-add" type="submit" class="btn btn-info" value="Add">
+                                        </div>
+                                    </form>
+
+                                
+    
+                                </div>
+                            </div>
+
+                            <!-- Item : 4 -->
+                            <div id="item4" class="row item">
+                                <div class="col">
+                                    <div class="img-pane">
+                                        <img src="/img/Baked brie.jpg" alt="spagetti">
+                                    </div>
+                                </div>
+                                <div class="space-pane" >
+
+                                    <form action="/menu2/add2" method="post">
+                                        <div class="info-head noneDisplay" name="name">
+                                            <input type="text" class="form-control" name="name" value="<%= name="Baked brie" %>" autocomplete="off">
+                                        </div>
+                                        <input type="text" class="form-control noneDisplay" name="status" value="<%= status="Queue" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="price" value="<%= price=180 %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="img" value="<%= img="/img/Baked brie.jpg" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="table_num" value="<%= table_num=2 %>" autocomplete="off">
+                                        
+                                        <div id="item4" class="info-head" name="name">
+                                            
+                                            Baked brie
+    
+                                        </div>
+                                        <div class="info-para" name="status"> 
+                                            Smoked chicken quesadilla with catamelized onions, roasted poblano guacamole, jicama
+                                            salsa & chipotle
+                                         </div>
+                                         <div class="info-para" name="price"> 
+                                            Price: 180 Baht
+                                         </div>
+                                         <div class="info-para">
+                                            <input type="text" placeholder="add some special..." name="special" value="<%= special %> ">
+                                         </div>
+                                        <div class="button-pane quantity buttons_added">
+                                            <input type="button" onclick="decrease4()" value="-" class="minus">
+                                            <input id="text4" type="number" step="1" min="1"
+                                                max="" name="quantity" value="1" value="<%= quantity %> " title="Qty" class="input-text qty text"
+                                                size="4" pattern="" inputmode="" >
+                                            <input type="button" onclick="increase4()" value="+" class="plus">
+
+                                            <input class="button-add" type="submit" class="btn btn-info" value="Add">
+                                        </div>
+                                    </form>
+
+                                
+    
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div id="main_dishes" class="head-leftpane">
+                            Main Dishes
+                            <hr>
+                        </div>
+                        <div class="leftpane">
+
+                            <!-- Item : 5 -->
+                            <div id="item5" class="row item">
+                                <div class="col">
+                                    <div class="img-pane">
+                                        <img src="/img/Mushroom and potato tart.jpg" alt="spagetti">
+                                    </div>
+                                </div>
+                                <div class="space-pane" >
+
+                                    <form action="/menu2/add2" method="post">
+                                        <div class="info-head noneDisplay" name="name">
+                                            <input type="text" class="form-control" name="name" value="<%= name="Mushroom and potato tart" %>" autocomplete="off">
+                                        </div>
+                                        <input type="text" class="form-control noneDisplay" name="status" value="<%= status="Queue" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="price" value="<%= price=260 %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="img" value="<%= img="/img/Mushroom and potato tart.jpg" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="table_num" value="<%= table_num=2 %>" autocomplete="off">
+                                        
+                                        <div class="info-head" name="name">
+                                            
+                                            Mushroom and potato tart
+    
+                                        </div>
+                                        <div class="info-para" name="status"> 
+                                            Fresh oyster mushrooms, fingerling potatoes in a cornmeal crust
+                                         </div>
+                                         <div class="info-para" name="price"> 
+                                            Price: 260 Baht
+                                         </div>
+                                         <div class="info-para">
+                                            <input type="text" placeholder="add some special..." name="special" value="<%= special %> ">
+                                         </div>
+                                        <div class="button-pane quantity buttons_added">
+                                            <input type="button" onclick="decrease5()" value="-" class="minus">
+                                            <input id="text5" type="number" step="1" min="1"
+                                                max="" name="quantity" value="1" value="<%= quantity %> " title="Qty" class="input-text qty text"
+                                                size="4" pattern="" inputmode="" >
+                                            <input type="button" onclick="increase5()" value="+" class="plus">
+
+                                            <input class="button-add" type="submit" class="btn btn-info" value="Add">
+                                        </div>
+                                    </form>
+
+                                
+    
+                                </div>
+                            </div>
+
+                            <!-- Item : 6 -->
+                            <div id="item6" class="row item">
+                                <div class="col">
+                                    <div class="img-pane">
+                                        <img src="/img/Stuffed sweet italian peppers.jpg" alt="spagetti">
+                                    </div>
+                                </div>
+                                <div class="space-pane" >
+
+                                    <form action="/menu2/add2" method="post">
+                                        <div class="info-head noneDisplay" name="name">
+                                            <input type="text" class="form-control" name="name" value="<%= name="Stuffed sweet italian peppers" %>" autocomplete="off">
+                                        </div>
+                                        <input type="text" class="form-control noneDisplay" name="status" value="<%= status="Queue" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="price" value="<%= price=290 %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="img" value="<%= img="/img/Stuffed sweet italian peppers.jpg" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="table_num" value="<%= table_num=2 %>" autocomplete="off">
+                                        
+                                        <div class="info-head" name="name">
+                                            
+                                            Stuffed sweet italian peppers
+    
+                                        </div>
+                                        <div class="info-para" name="status"> 
+                                            Freshly roasted baby red and green peppers stuffed with herbed goat cheese
+                                         </div>
+                                         <div class="info-para" name="price"> 
+                                            Price: 290 Baht
+                                         </div>
+                                         <div class="info-para">
+                                            <input type="text" placeholder="add some special..." name="special" value="<%= special %> ">
+                                         </div>
+                                        <div class="button-pane quantity buttons_added">
+                                            <input type="button" onclick="decrease6()" value="-" class="minus">
+                                            <input id="text6" type="number" step="1" min="1"
+                                                max="" name="quantity" value="1" value="<%= quantity %> " title="Qty" class="input-text qty text"
+                                                size="4" pattern="" inputmode="" >
+                                            <input type="button" onclick="increase6()" value="+" class="plus">
+
+                                            <input class="button-add" type="submit" class="btn btn-info" value="Add">
+                                        </div>
+                                    </form>
+
+                                
+    
+                                </div>
+                            </div>
+
+                            <!-- Item : 7 -->
+                            <div id="item7" class="row item">
+                                <div class="col">
+                                    <div class="img-pane">
+                                        <img src="/img/Spinash salad.jpg" alt="spagetti">
+                                    </div>
+                                </div>
+                                <div class="space-pane" >
+
+                                    <form action="/menu2/add2" method="post">
+                                        <div class="info-head noneDisplay" name="name">
+                                            <input type="text" class="form-control" name="name" value="<%= name="Spinach salad" %>" autocomplete="off">
+                                        </div>
+                                        <input type="text" class="form-control noneDisplay" name="status" value="<%= status="Queue" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="price" value="<%= price=250 %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="img" value="<%= img="/img/Spinash salad.jpg" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="table_num" value="<%= table_num=2 %>" autocomplete="off">
+                                        
+                                        <div class="info-head" name="name">
+                                            
+                                            Spinach salad
+    
+                                        </div>
+                                        <div class="info-para" name="status"> 
+                                            Baby spinach tossed with bacon, red onion, walnuts, balsamic vinaigrette
+                                         </div>
+                                         <div class="info-para" name="price"> 
+                                            Price: 250 Baht
+                                         </div>
+                                         <div class="info-para">
+                                            <input type="text" placeholder="add some special..." name="special" value="<%= special %> ">
+                                         </div>
+                                        <div class="button-pane quantity buttons_added">
+                                            <input type="button" onclick="decrease7()" value="-" class="minus">
+                                            <input id="text7" type="number" step="1" min="1"
+                                                max="" name="quantity" value="1" value="<%= quantity %> " title="Qty" class="input-text qty text"
+                                                size="4" pattern="" inputmode="" >
+                                            <input type="button" onclick="increase7()" value="+" class="plus">
+
+                                            <input class="button-add" type="submit" class="btn btn-info" value="Add">
+                                        </div>
+                                    </form>
+
+                                
+    
+                                </div>
+                            </div>
+
+                            <!-- Item : 8 -->
+                            <div id="item8" class="row item">
+                                <div class="col">
+                                    <div class="img-pane">
+                                        <img src="/img/Red iceberg salad.jpg" alt="spagetti">
+                                    </div>
+                                </div>
+                                <div class="space-pane" >
+
+                                    <form action="/menu2/add2" method="post">
+                                        <div class="info-head noneDisplay" name="name">
+                                            <input type="text" class="form-control" name="name" value="<%= name="Red iceberg salad" %>" autocomplete="off">
+                                        </div>
+                                        <input type="text" class="form-control noneDisplay" name="status" value="<%= status="Queue" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="price" value="<%= price=220 %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="img" value="<%= img="/img/Red iceberg salad.jpg" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="table_num" value="<%= table_num=2 %>" autocomplete="off">
+                                        
+                                        <div id="item4" class="info-head" name="name">
+                                            
+                                            Red iceberg salad
+    
+                                        </div>
+                                        <div class="info-para" name="status"> 
+                                            Red iceberg salad with sweet corn, blackberries, goat cheese & fresh basil
+                                         </div>
+                                         <div class="info-para" name="price"> 
+                                            Price: 220 Baht
+                                         </div>
+                                         <div class="info-para">
+                                            <input type="text" placeholder="add some special..." name="special" value="<%= special %> ">
+                                         </div>
+                                        <div class="button-pane quantity buttons_added">
+                                            <input type="button" onclick="decrease8()" value="-" class="minus">
+                                            <input id="text8" type="number" step="1" min="1"
+                                                max="" name="quantity" value="1" value="<%= quantity %> " title="Qty" class="input-text qty text"
+                                                size="4" pattern="" inputmode="" >
+                                            <input type="button" onclick="increase8()" value="+" class="plus">
+
+                                            <input class="button-add" type="submit" class="btn btn-info" value="Add">
+                                        </div>
+                                    </form>
+
+                                
+    
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div id="drinks" class="head-leftpane">
+                            Drinks
+                            <hr>
+                        </div>
+                        <div class="leftpane">
+
+                            <!-- Item : 9 -->
+                            <div id="item9" class="row item">
+                                <div class="col">
+                                    <div class="img-pane">
+                                        <img src="/img/Manhattan.jpg" alt="spagetti">
+                                    </div>
+                                </div>
+                                <div class="space-pane" >
+
+                                    <form action="/menu2/add2" method="post">
+                                        <div class="info-head noneDisplay" name="name">
+                                            <input type="text" class="form-control" name="name" value="<%= name="Manhattan" %>" autocomplete="off">
+                                        </div>
+                                        <input type="text" class="form-control noneDisplay" name="status" value="<%= status="Queue" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="price" value="<%= price=80 %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="img" value="<%= img="/img/Manhattan.jpg" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="table_num" value="<%= table_num=2 %>" autocomplete="off">
+                                        
+                                        <div class="info-head" name="name">
+                                            
+                                            Manhattan
+    
+                                        </div>
+                                        <div class="info-para" name="status"> 
+                                            Whiskey, bitters, seet vermouth, cherry
+                                         </div>
+                                         <div class="info-para" name="price"> 
+                                            Price: 80 Baht
+                                         </div>
+                                         <div class="info-para">
+                                            <input type="text" placeholder="add some special..." name="special" value="<%= special %> ">
+                                         </div>
+                                        <div class="button-pane quantity buttons_added">
+                                            <input type="button" onclick="decrease9()" value="-" class="minus">
+                                            <input id="text9" type="number" step="1" min="1"
+                                                max="" name="quantity" value="1" value="<%= quantity %> " title="Qty" class="input-text qty text"
+                                                size="4" pattern="" inputmode="" >
+                                            <input type="button" onclick="increase9()" value="+" class="plus">
+
+                                            <input class="button-add" type="submit" class="btn btn-info" value="Add">
+                                        </div>
+                                    </form>
+
+                                
+    
+                                </div>
+                            </div>
+
+                            <!-- Item : 10 -->
+                            <div id="item10" class="row item">
+                                <div class="col">
+                                    <div class="img-pane">
+                                        <img src="/img/Old fashioned.jpg" alt="spagetti">
+                                    </div>
+                                </div>
+                                <div class="space-pane" >
+
+                                    <form action="/menu2/add2" method="post">
+                                        <div class="info-head noneDisplay" name="name">
+                                            <input type="text" class="form-control" name="name" value="<%= name="Old fashioned" %>" autocomplete="off">
+                                        </div>
+                                        <input type="text" class="form-control noneDisplay" name="status" value="<%= status="Queue" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="price" value="<%= price=110 %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="img" value="<%= img="/img/Old fashioned.jpg" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="table_num" value="<%= table_num=2 %>" autocomplete="off">
+                                        
+                                        <div class="info-head" name="name">
+                                            
+                                            Old fashioned
+    
+                                        </div>
+                                        <div class="info-para" name="status"> 
+                                            Bourbon, muddled sugar& orange slice, orange bitters, cherry
+                                         </div>
+                                         <div class="info-para" name="price"> 
+                                            Price: 110 Baht
+                                         </div>
+                                         <div class="info-para">
+                                            <input type="text" placeholder="add some special..." name="special" value="<%= special %> ">
+                                         </div>
+                                        <div class="button-pane quantity buttons_added">
+                                            <input type="button" onclick="decrease10()" value="-" class="minus">
+                                            <input id="text10" type="number" step="1" min="1"
+                                                max="" name="quantity" value="1" value="<%= quantity %> " title="Qty" class="input-text qty text"
+                                                size="4" pattern="" inputmode="" >
+                                            <input type="button" onclick="increase10()" value="+" class="plus">
+
+                                            <input class="button-add" type="submit" class="btn btn-info" value="Add">
+                                        </div>
+                                    </form>
+
+                                
+    
+                                </div>
+                            </div>
+
+                            <!-- Item : 11 -->
+                            <div id="item11" class="row item">
+                                <div class="col">
+                                    <div class="img-pane">
+                                        <img src="/img/Ward Eight.jpg" alt="spagetti">
+                                    </div>
+                                </div>
+                                <div class="space-pane" >
+
+                                    <form action="/menu2/add2" method="post">
+                                        <div class="info-head noneDisplay" name="name">
+                                            <input type="text" class="form-control" name="name" value="<%= name="Ward Eight" %>" autocomplete="off">
+                                        </div>
+                                        <input type="text" class="form-control noneDisplay" name="status" value="<%= status="Queue" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="price" value="<%= price=139 %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="img" value="<%= img="/img/Ward Eight.jpg" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="table_num" value="<%= table_num=2 %>" autocomplete="off">
+                                        
+                                        <div class="info-head" name="name">
+                                            
+                                            Ward Eight
+    
+                                        </div>
+                                        <div class="info-para" name="status"> 
+                                            Ryewhiske, fresh-squeezed lemon & orange juice, house-made grenaline
+                                         </div>
+                                         <div class="info-para" name="price"> 
+                                            Price: 139 Baht
+                                         </div>
+                                         <div class="info-para">
+                                            <input type="text" placeholder="add some special..." name="special" value="<%= special %> ">
+                                         </div>
+                                        <div class="button-pane quantity buttons_added">
+                                            <input type="button" onclick="decrease11()" value="-" class="minus">
+                                            <input id="text11" type="number" step="1" min="1"
+                                                max="" name="quantity" value="1" value="<%= quantity %> " title="Qty" class="input-text qty text"
+                                                size="4" pattern="" inputmode="" >
+                                            <input type="button" onclick="increase11()" value="+" class="plus">
+
+                                            <input class="button-add" type="submit" class="btn btn-info" value="Add">
+                                        </div>
+                                    </form>
+
+                                
+    
+                                </div>
+                            </div>
+
+                            <!-- Item : 12 -->
+                            <div id="item12" class="row item">
+                                <div class="col">
+                                    <div class="img-pane">
+                                        <img src="/img/The brazilian.jpg" alt="spagetti">
+                                    </div>
+                                </div>
+                                <div class="space-pane" >
+
+                                    <form action="/menu2/add2" method="post">
+                                        <div class="info-head noneDisplay" name="name">
+                                            <input type="text" class="form-control" name="name" value="<%= name="The brazilian" %>" autocomplete="off">
+                                        </div>
+                                        <input type="text" class="form-control noneDisplay" name="status" value="<%= status="Queue" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="price" value="<%= price=129 %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="img" value="<%= img="/img/The brazilian.jpg" %>" autocomplete="off">
+                                        <input type="text" class="form-control noneDisplay" name="table_num" value="<%= table_num=2 %>" autocomplete="off">
+                                        
+                                        <div id="item4" class="info-head" name="name">
+                                            
+                                            The brazilian
+    
+                                        </div>
+                                        <div class="info-para" name="status"> 
+                                            Brazillian cachaca, fresh strawberries, martinique sugar cane syrup, grapefruit juice and lime
+                                        </div>
+                                         </div>
+                                         <div class="info-para" name="price"> 
+                                            Price: 129 Baht
+                                         </div>
+                                         <div class="info-para">
+                                            <input type="text" placeholder="add some special..." name="special" value="<%= special %> ">
+                                         </div>
+                                        <div class="button-pane quantity buttons_added">
+                                            <input type="button" onclick="decrease12()" value="-" class="minus">
+                                            <input id="text12" type="number" step="1" min="1"
+                                                max="" name="quantity" value="1" value="<%= quantity %> " title="Qty" class="input-text qty text"
+                                                size="4" pattern="" inputmode="" >
+                                            <input type="button" onclick="increase12()" value="+" class="plus">
+
+                                            <input class="button-add" type="submit" class="btn btn-info" value="Add">
+                                        </div>
+                                    </form>
+
+                                
+    
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+            
+        </section>
+
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+/* Navigation Bar*/
+.navbar-brand {
+    font-family: "Ubuntu", sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .nav-item {
+    padding: 0 18px;
+  }
+  
+  .nav-link {
+    font-family: "Montserrat", sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+  
+  #navigator .container-fluid {
+    padding: 0.5% 5% 0.5% 5%;
+  }
+  
+  #navigator {
+    background-color: #313131;
+    height: 100px;
+  }
+  
+  /* Intro */
+  #intro .container-fluid {
+    padding: 21%;
+    background-image: url("../img/bg-intro.jpg");
+    background-size: auto;
+  }
+  
+  .head-intro {
+    font-size: 5vw;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .head-desc {
+    line-height: 10px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+  }
+  
+  .head-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+  }
+  
+  .button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.85s;
+    cursor: pointer;
+  }
+  
+  .button1 {
+    background-color: transparent;
+    color: white;
+    border: 2px solid #4CAF50;
+  }
+  
+  .button1:hover {
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-size: xx-large;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 2% 5% 2% 5%;
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #313131;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  .menubtn {
+    color: white;
+    padding: 0.5% 5% 0.5% 5%;
+    border-style: solid solid solid solid;
+    border: white;
+  }
+  
+  .checklist-bar {
+    float: right;
+    color: white;
+  }
+  
+  .checklist-icon {
+    color: white;
+  }
+  
+  .name-bar {
+    font-size: 2rem;
+    text-align: center;
+    margin: auto;
+    width: auto;
+  }
+  
+  .forStaff-icon {
+    
+  }

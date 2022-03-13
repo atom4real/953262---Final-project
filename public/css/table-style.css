@@ -1,0 +1,42 @@
+#table {
+    background-image: url('../img/bg-table.jpeg');
+    padding: 13%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.table-row {
+    text-align: center;
+}
+.btn-table {
+    padding: 3% 3% 3% 3%;
+}
+.button-add {
+    padding: 10% 10% 10% 10%;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    background-color: transparent;
+    transition-duration: 0.85s;
+    border: 3px solid;
+    color: white;
+    font-size: 3rem;
+}
+.button-add:hover {
+    background-color: #4CAF50;
+    color: black;
+    transition: .84s;
+    font-size: 5rem;
+    text-decoration: none;
+    box-shadow: 2px 6px 12px 1px rgba(15, 167, 1, 0.9), 0 10px 60px 0 rgba(14, 165, 0, 0.9);
+}
+.table-head {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4rem;
+    color: white ;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-weight: bolder;
+    text-shadow: 2px 2px 6px black;
+}

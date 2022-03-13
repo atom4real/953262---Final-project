@@ -1,0 +1,120 @@
+#chefs-table {
+    background-image: url('../img/chef-bg.jpeg');
+    padding: 3% 10% 15% 10%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.chefs-table-row {
+    text-align: center;
+}
+.chefs-btn-table {
+    padding: 3% 3% 3% 3%;
+    text-align: center;
+}
+/* .chefs-button-add {
+    padding: 10% 10% 10% 10%;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    background-color: transparent;
+    transition-duration: 0.85s;
+    border: 3px solid;
+    color: white;
+    font-size: 3rem;
+}
+.chefs-button-add:hover {
+    background-color: #4CAF50;
+    color: black;
+    transition: .84s;
+    font-size: 5rem;
+    text-decoration: none;
+    box-shadow: 2px 6px 12px 1px rgba(15, 167, 1, 0.9), 0 10px 60px 0 rgba(14, 165, 0, 0.9);
+} */
+.chefs-table-head {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.7rem;
+    color: white ;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    font-weight: bolder;
+}
+
+.chefs-table-head2 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4rem;
+    color: white ;
+    padding-top: 4%;
+    padding-bottom: 0.7%;
+    font-weight: bolder;
+    text-shadow: 2px 2px 6px black;
+}
+
+.btn-center {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border-radius: 5%;
+}
+
+/* CSS */
+.button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button-64:active,
+.button-64:hover {
+  outline: 0;
+}
+
+.button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button-64:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .button-64 {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+
+.check-icon {
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.arrow {
+    font-size: 5rem;
+}

@@ -1,0 +1,154 @@
+.img-index {
+    width: 100px; 
+  }
+.head-orderlist {
+  padding: 1.5% 5% 1.5% 5%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  text-align: center;
+  
+}
+.col {
+  text-align: center;
+}
+
+.button-refresh {
+  background-color: #3c9b25;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: auto;
+  font-size: 1.5rem;
+  height: 100%;
+  transition-duration: 0.85s;
+  cursor: pointer;
+  border-radius: 8px;
+  float: left;
+}
+
+.button-refresh:hover {
+  color: white;
+  background-color:#286619;
+  text-decoration: none;
+  font-size: large;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button-back {
+  background-color: #ff4444;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: auto;
+  font-size: 1.5rem;
+  height: 100%;
+  transition-duration: 0.85s;
+  cursor: pointer;
+  border-radius: 8px;
+  float: right;
+}
+.button-back:hover {
+  color: white;
+  background-color:#b12121;
+  text-decoration: none;
+  font-size: large;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button-add {
+  background-color: #2d88dd;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: auto;
+  font-size: 1.5rem;
+  height: 100%;
+  transition-duration: 0.85s;
+  cursor: pointer;
+  border-radius: 8px;
+  float: right;
+}
+.button-add:hover {
+  color: white;
+  background-color:#0467c4;
+  text-decoration: none;
+  font-size: large;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.price_txt {
+	text-align: left;
+	font-weight: bolder;
+  font-size: 1.4rem;
+}
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+  background-color: #8b8b8b;
+}
+
+.btn-on-left {
+  float: left;
+}
+
+.scan2pay {
+  text-align: center;
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+
+.scan2pay h1{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.img-scan img{
+   height: 650px;
+   width: auto;
+}
+
+.img-bank img {
+  width: auto;
+  height: 100px;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.85s;
+  cursor: pointer;
+}
+
+.pay-button {
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  border: 2px solid #db4949;
+}
+
+.pay-button:hover {
+  background-color: #db4949;
+  color: white;
+  text-decoration: none;
+  font-size: xx-large;
+}
+
+.btn-done {
+  text-align: center;
+}

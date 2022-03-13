@@ -1,0 +1,68 @@
+<%- include("../partials/nav") -%> 
+
+    <% if (messages.error) { %>
+        <div class="alert alert-danger" role="alert"><%= messages.error %></div>
+    <% } %>
+    
+    <% if (messages.success) { %>
+        <div class="alert alert-success" role="alert"><%= messages.success %></div>
+    <% } %>
+
+    <div class="card">
+        <div class="card-header">
+            <div class="head-orderlist">
+                <div class="row">
+                    <div class="col">
+                        <a onclick="refreshPage()" class="button-refresh">Refresh</a>
+                    </div>
+                    <div class="col">
+                        LIST OF ORDERS<br>
+                        <span style="font-size: 68%;">( for chefs )</span>
+                    </div>
+                    <div class="col">
+                        <a href="/logout" class="button-back">SIGN OUT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <% if(data.length) { %>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Images</th>
+                            <th scope="col">Lists</th>
+                            <th scope="col">Table</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col" width="200px">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(let i = 0; i < data.length; i++) { %>
+                            <tr>
+                                <th scope="row">
+                                    <%= data[i].id %></th>
+                                <td><img class="img-index" src="<%= data[i].img %>" alt=""></td>
+                                <td><%= data[i].name %></td>
+                                <td><%= data[i].table_num %></td>
+                                <td><%= data[i].status %></td>
+                                <td><%= data[i].quantity %></td>
+                                <td>
+                                    <a href="../menu/edit/<%= data[i].id %>" class="btn btn-success edit">Edit</a>
+                                </td>
+                            </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            <% } %>
+
+            <!-- if result is empty -->
+            <% if(!data.length) { %>
+                <p class="text-center">Order is not found!</p>
+            <% } %>
+        </div>
+    </div>
+
+<%- include("../partials/footer") -%> 

@@ -1,0 +1,59 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-bg {
+    background-image: url('../img/about-us-bg.jpeg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50%; 
+    filter: blur(8px);
+    filter: opacity(70%);
+    -webkit-filter: blur(6px);
+}
+
+.about-text-head {
+    color: white;
+    font-weight: bolder;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -120%);
+    z-index: 2;
+    font-size: 5rem;
+    text-shadow: 2px 1px #000000;
+    min-width: 30%;
+    padding: 60px 60px 60px 60px;
+    text-align: center;
+}
+
+.text-col {
+    text-align: center;
+    text-indent: 5%;
+    font-size: 2.2rem;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.text-pane {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.icon {
+    padding-bottom: 2%;
+    font-size: 7rem;
+    transition: 0.85s;
+}
+.icon1:hover {
+    color: rgb(202, 0, 0);
+}
+
+.icon2:hover {
+    color: rgb(6, 167, 0);
+}
+.icon3:hover {
+    color: rgb(230, 207, 0);
+}
